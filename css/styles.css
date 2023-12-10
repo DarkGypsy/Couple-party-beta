@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Mono&family=Ubuntu:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 2vh;
+}
+
+#score {
+  height: 60px;
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+#score h2 {
+  font-size: 1.4rem;
+}
+#score h3 {
+  font-size: 1.2rem;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #282828;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#game {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  gap: 20px;
+  border: 1px solid gray;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  height: 500px;
+}
+#game label {
+  color: white;
+  font-size: 1.6rem;
+  padding: 5px;
+}
+#game #game-start {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  width: 100px;
+  height: 40px;
+  background: #141414;
+  font-size: 1.5em;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#game #game-start:hover {
+  opacity: 0.7;
+}
+#game #boy-name {
+  padding: 10px;
+  width: 300px;
+  height: 30px;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+#game #girl-name {
+  padding: 10px;
+  width: 300px;
+  height: 30px;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+#game #win-pnt {
+  padding: 10px;
+  width: 50px;
+  height: 30px;
+  font-size: 20px;
+  padding: 0;
+  padding-left: 5px;
+  font-family: "Ubuntu", sans-serif;
+}
+#game #game-btn {
+  display: flex;
+  gap: 10px;
+}
+#game #yes {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  width: 70px;
+  height: 50px;
+  background: green;
+  font-size: 40px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#game #yes:hover {
+  opacity: 0.7;
+}
+#game #yes span {
+  font-size: 40px;
+}
+#game #yes:disabled {
+  background: gray;
+}
+#game #no {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  width: 70px;
+  height: 50px;
+  background: red;
+  font-size: 40px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#game #no:hover {
+  opacity: 0.7;
+}
+#game #no span {
+  font-size: 40px;
+}
+#game #no:disabled {
+  background: gray;
+}
+#game .timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+#game .timer #gametime {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  width: 100px;
+  height: 40px;
+  background: #141414;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#game .timer #gametime:hover {
+  opacity: 0.7;
+}
+#game h2 {
+  font-size: 1.8rem;
+}
+#game p {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+#game p > span {
+  font-weight: bold;
+  color: #f94444;
+}
+#game #continue {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  width: 150px;
+  height: 55px;
+  background: #141414;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#game #continue:hover {
+  opacity: 0.7;
+}
+#game .hidden {
+  height: 10px;
+  background: #141414;
+  overflow: hidden;
+}
+#game .hidden:hover {
+  background: none;
+  height: auto;
+  overflow: visible;
+}
+#game .fk-btn {
+  text-decoration: none;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  width: 150px;
+  height: 55px;
+  background: #141414;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#game .fk-btn:hover {
+  opacity: 0.7;
+}
+
+footer {
+  padding-bottom: 20px;
+}
+footer a {
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 829px) {
+  #game {
+    height: auto;
+    width: 70%;
+  }
+  #game #boy-name {
+    padding: 10px;
+    width: 85%;
+    height: 30px;
+    font-size: 20px;
+    font-family: "Ubuntu", sans-serif;
+  }
+  #game #girl-name {
+    padding: 10px;
+    width: 85%;
+    height: 30px;
+    font-size: 20px;
+    font-family: "Ubuntu", sans-serif;
+  }
+  #game p {
+    font-size: 1.2rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

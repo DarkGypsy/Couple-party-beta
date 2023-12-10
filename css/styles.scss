@@ -1,0 +1,167 @@
+@use 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&family=Ubuntu:wght@300;400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+:root{
+    font-size: 2vh;
+}
+#score{
+    height: 60px;
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    h2{
+        font-size: 1.4rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background: #282828;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+#game{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    gap: 20px;
+    border: 1px solid gray;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    height: 500px;
+    label{
+        color: white;
+        font-size: 1.6rem;
+        padding: 5px
+    }
+    #game-start{
+        @include mixins.btns(100px , 40px, #141414, 1.5em);
+    }
+    #boy-name{
+        @include mixins.input(300px , 30px);
+        font-family: 'Ubuntu', sans-serif;
+    }
+    #girl-name{
+        @include mixins.input(300px , 30px);
+        font-family: 'Ubuntu', sans-serif;
+    }
+    #win-pnt{
+        @include mixins.input(50px , 30px);
+        padding: 0;
+        padding-left: 5px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    #game-btn{
+        display: flex;
+        gap: 10px;
+    }
+    #yes{
+        @include mixins.btns(70px , 50px, green, 40px);
+        span{
+            font-size: 40px;
+        }
+        &:disabled{
+            background: gray;
+        }
+    }
+    #no{
+        @include mixins.btns(70px , 50px, red, 40px);
+        span{
+            font-size: 40px;
+        }
+        &:disabled{
+            background: gray;
+        }
+    }
+    .timer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        #gametime{
+            @include mixins.btns(100px , 40px, #141414, 1.5rem)
+        }
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+    p{
+        font-size: 1.5rem;
+        font-weight: normal;
+        & > span{
+            font-weight: bold;
+            color: #f94444;
+        }
+    }
+    
+    #continue{
+        @include mixins.btns(150px , 55px, #141414, 1.5rem)
+
+    }
+
+    .hidden{
+        height: 10px;
+        background: #141414;
+        overflow: hidden;
+        &:hover{
+            background: none;
+            height: auto;
+            overflow: visible;
+        }
+       
+      
+    }
+
+    .fk-btn{
+        text-decoration: none;
+        @include mixins.btns(150px , 55px, #141414, 1.5rem)
+    }
+
+}
+footer{
+    padding-bottom: 20px;
+    a{
+        text-decoration: none;
+        font-family: 'Ubuntu', sans-serif;
+        color: white;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 829px){
+    #game{
+        height: auto;
+        width: 70%;
+        #boy-name{
+            @include mixins.input(85% , 30px);
+            font-family: 'Ubuntu', sans-serif;
+        }
+        #girl-name{
+            @include mixins.input(85% , 30px);
+            font-family: 'Ubuntu', sans-serif;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+    }
+  
+}
